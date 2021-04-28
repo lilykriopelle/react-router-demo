@@ -3,14 +3,14 @@ import { useSelector } from 'react-redux';
 import { selectArticles, filterArticles } from './articlesSlice';
 import { Link, useRouteMatch, useLocation } from 'react-router-dom';
 
-export function Articles () {
+export default function Articles () {
   const articles = useSelector(selectArticles)
   const { url } = useRouteMatch()
 
   const { search } = useLocation()
   const queryParams = new URLSearchParams(search)
   const title = queryParams.get('title')
-  
+
   const filteredArticles = title ? filterArticles(title, articles) : Object.values(articles)
 
   return (

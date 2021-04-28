@@ -4,7 +4,7 @@ import { selectCategories } from './categoriesSlice';
 import { selectArticles } from '../articles/articlesSlice';
 import { Link, useRouteMatch, useParams } from 'react-router-dom';
 
-export function Category () {
+export default function Category () {
   const categories = useSelector(selectCategories)
   const articles = useSelector(selectArticles)
 

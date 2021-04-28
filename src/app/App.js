@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { Header } from '../components/Header'
-import { SignUp } from '../components/SignUp'
-import { Articles } from '../features/articles/Articles'
-import { Article } from '../features/articles/Article'
-import { Categories } from '../features/categories/Categories'
-import { Author } from '../features/authors/Author'
-import { Profile } from '../features/currentUser/Profile'
+import  Header  from '../components/Header'
+import  SignUp  from '../components/SignUp'
+import  Articles  from '../features/articles/Articles'
+import  Article  from '../features/articles/Article'
+import  Categories  from '../features/categories/Categories'
+import  Author  from '../features/authors/Author'
+import  Profile  from '../features/session/Profile'
 
 import './App.css';
 

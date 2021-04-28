@@ -3,7 +3,7 @@ import { NavLink , useHistory} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCurrentUser, logOut } from '../features/session/sessionSlice'
 
-export function Header () {
+export default function Header () {
   const currentUser = useSelector(selectCurrentUser);
   const dispatch = useDispatch();
   const history = useHistory();

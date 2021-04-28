@@ -3,7 +3,7 @@ import { editUser } from '../features/session/sessionSlice'
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, Redirect } from 'react-router-dom'
 
-export function EditProfileForm () {
+export default function EditProfileForm () {
   const [username, setUsername] = useState('');
   const dispatch = useDispatch();
   const history = useHistory();

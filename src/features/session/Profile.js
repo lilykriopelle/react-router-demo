@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Route, Link, Redirect, useRouteMatch } from 'react-router-dom';
 import { selectCurrentUser, selectIsLoggedIn } from './sessionSlice';
-import { EditProfileForm } from '../../components/EditProfileForm';
+import EditProfileForm from '../../components/EditProfileForm';
 
-export function Profile () {
+export default function Profile () {
   const currentUser = useSelector(selectCurrentUser)
   const loggedIn = useSelector(selectIsLoggedIn)
 

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { signUp } from '../features/currentUser/currentUserSlice'
+import { signUp } from '../features/session/sessionSlice'
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, Redirect } from 'react-router-dom'
 
-export function SignUp () {
+export default function SignUp () {
   const [username, setUsername] = useState('');
   const dispatch = useDispatch();
   const history = useHistory();

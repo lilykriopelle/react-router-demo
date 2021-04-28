@@ -4,7 +4,7 @@ import { selectArticles } from './articlesSlice';
 import { Link, useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 
-export function Article () {
+export default function Article () {
   const articles = useSelector(selectArticles)
   const { title } = useParams()
   const article = articles[title]
