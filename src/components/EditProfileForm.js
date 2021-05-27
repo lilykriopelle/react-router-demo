@@ -1,33 +1,35 @@
-import React, { useState } from 'react';
-import { editUser } from '../features/session/sessionSlice'
-import { useDispatch, useSelector } from 'react-redux';
-import { useHistory, Redirect } from 'react-router-dom'
+import React, { useState } from "react";
+import { editUser } from "../features/session/sessionSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory, Redirect } from "react-router-dom";
 
-export default function EditProfileForm () {
-  const [username, setUsername] = useState('');
+export default function EditProfileForm() {
+  const [username, setUsername] = useState("");
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(editUser({username: username}));
-    history.push('/profile');
-  }
+    dispatch(editUser({ username: username }));
+    history.push("/profile");
+  };
 
   return (
     <section>
-      <h1>Edit Username</h1>
+      <h2>Edit Username</h2>
       <form onSubmit={handleSubmit}>
         <label>
-        Username
-          <input
-            id='username'
-            value={username}
-            onChange={(e) => setUsername(e.currentTarget.value)}
-          />
+          Username
+          <div>
+            <input
+              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.currentTarget.value)}
+            />
+            <button className="primary">Edit</button>
+          </div>
         </label>
-        <button>Edit</button>
       </form>
     </section>
-  )
+  );
 }

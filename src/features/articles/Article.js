@@ -12,7 +12,7 @@ export default function Article () {
   return (
     <div className='article-container'>
       <h1 className='article-title'>{article.title}</h1>
-      <h2>by <Link to={`/authors/${article.author}`}>{article.author}</Link></h2>
+      <p>By <Link to={`/authors/${article.author}`}>{article.author}</Link></p>
       <ReactMarkdown>
         {article.body}
       </ReactMarkdown>
