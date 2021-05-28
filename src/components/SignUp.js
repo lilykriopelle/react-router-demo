@@ -19,15 +19,19 @@ export default function SignUp () {
       <h1>Sign Up</h1>
       <form onSubmit={handleSubmit}>
         <label>
-        Username
-          <input
-            id='username'
-            value={username}
-            onChange={(e) => setUsername(e.currentTarget.value)}
-          />
+          Username
+          <div>
+            <input
+              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.currentTarget.value)}
+            />
+            <button type="submit" className="primary">
+              Sign Up
+            </button>
+          </div>
         </label>
-        <button>Sign Up</button>
       </form>
     </section>
-  )
+  );
 }
